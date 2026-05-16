@@ -15,9 +15,9 @@ export default function HomePage() {
       <Header />
       <main className="min-h-screen overflow-x-hidden bg-[#050705] text-white selection:bg-[#b49b6a]/30 selection:text-white">
         <HeroSection />
-        <HuntTypesSection />
-        <FeaturesSection />
         <AboutSection />
+        <FeaturesSection />
+        <HuntTypesSection />
         <ServicesSection />
         <PricingSection />
         <GallerySection />

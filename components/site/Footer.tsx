@@ -13,6 +13,12 @@ const footerLinks = [
 ];
 
 export function Footer() {
+  const navigationLinks = footerLinks.flatMap((item) =>
+    item.href === "/accommodation-prices"
+      ? [{ href: "/become-hunter", label: "Стать охотником" }]
+      : [item],
+  );
+
   return (
     <footer className="relative overflow-hidden bg-[#030503] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(215,199,160,0.12),transparent_24%),radial-gradient(circle_at_85%_15%,rgba(72,102,60,0.18),transparent_18%),linear-gradient(to_bottom,rgba(255,255,255,0.02),transparent_18%)]" />
@@ -74,7 +80,7 @@ export function Footer() {
                   Навигация
                 </p>
                 <div className="mt-4 flex flex-col gap-2.5 text-sm text-white/72">
-                  {footerLinks.map((item) => (
+                  {navigationLinks.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}

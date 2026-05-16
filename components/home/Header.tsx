@@ -9,6 +9,11 @@ import { homeNavigationItems } from "./content";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigationItems = homeNavigationItems.map((item) =>
+    item.href === "/#accommodation"
+      ? { href: "/become-hunter", label: "Стать охотником" }
+      : item,
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#081008]/55 backdrop-blur-xl">
@@ -50,7 +55,7 @@ export function Header() {
 
           <div className="hidden items-center gap-8 xl:flex">
             <nav className="flex items-center gap-6 text-sm text-white/74">
-              {homeNavigationItems.map((item) => (
+              {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -74,7 +79,7 @@ export function Header() {
           <div className="border-t border-white/10 pb-4 pt-4 xl:hidden">
             <div className="rounded-[28px] border border-white/10 bg-black/20 p-3 shadow-2xl shadow-black/20">
               <nav className="flex flex-col">
-                {homeNavigationItems.map((item) => (
+                {navigationItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
