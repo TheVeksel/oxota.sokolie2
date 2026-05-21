@@ -5,21 +5,34 @@ import { heroStats } from "./content";
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative overflow-hidden border-b border-white/8">
+    <section
+      id="top"
+      className="relative overflow-hidden border-b border-white/8"
+    >
+      {/* VIDEO BACKGROUND */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover scale-105 blur-[7px] brightness-75 contrast-110 saturate-110"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(5,7,5,0.9)_10%,rgba(5,7,5,0.44)_55%,rgba(5,7,5,0.86)_100%)]" />
+
+
+      {/* YOUR ORIGINAL GRADIENTS (slightly adjusted) */}
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(5,7,5,0.9)_10%,rgba(5,7,5,0.55)_55%,rgba(5,7,5,0.86)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(215,199,160,0.14),transparent_24%),radial-gradient(circle_at_50%_30%,rgba(62,88,52,0.18),transparent_32%),linear-gradient(to_bottom,rgba(255,255,255,0.04),transparent_22%)]" />
+
+      {/* BOTTOM FADE */}
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050705] to-transparent" />
 
+      {/* NOISE LAYER (very important for compression hiding) */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay noise" />
+
+      {/* CONTENT */}
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4.75rem)] max-w-7xl flex-col items-center justify-center px-6 py-16 text-center lg:px-10">
         <div className="max-w-4xl">
           <div className="inline-flex items-center rounded-full border border-white/12 bg-black/22 px-4 py-2 text-xs uppercase tracking-[0.34em] text-[#ead9b6] backdrop-blur-md">
@@ -43,6 +56,7 @@ export function HeroSection() {
             >
               Смотреть программы <ArrowRight className="h-4 w-4" />
             </a>
+
             <Link
               href="/price-list"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/12"
@@ -58,7 +72,9 @@ export function HeroSection() {
               key={item.label}
               className="rounded-[24px] border border-white/10 bg-black/26 px-5 py-4 text-center backdrop-blur-md"
             >
-              <p className="text-2xl font-semibold text-[#d7c7a0]">{item.value}</p>
+              <p className="text-2xl font-semibold text-[#d7c7a0]">
+                {item.value}
+              </p>
               <p className="mt-1 text-sm text-white/62">{item.label}</p>
             </div>
           ))}

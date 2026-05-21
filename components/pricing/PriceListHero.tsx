@@ -43,7 +43,7 @@ export function PriceListHero() {
                 href="/accommodation-prices"
                 className="inline-flex items-center gap-2 rounded-full bg-[#d7c7a0] px-5 py-3 text-sm font-medium text-[#0b0f0b] transition hover:bg-[#ead9b6]"
               >
-                Цены на проживание <ArrowRight className="h-4 w-4" />
+                Форматы проживания <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/#contact"

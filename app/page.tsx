@@ -6,7 +6,6 @@ import { Header } from "../components/home/Header";
 import { HeroSection } from "../components/home/HeroSection";
 import { HuntTypesSection } from "../components/home/HuntTypesSection";
 import { NewsSection } from "../components/home/NewsSection";
-import { PricingSection } from "../components/home/PricingSection";
 import { ServicesSection } from "../components/home/ServicesSection";
 
 export default function HomePage() {
@@ -19,7 +18,6 @@ export default function HomePage() {
         <FeaturesSection />
         <HuntTypesSection />
         <ServicesSection />
-        <PricingSection />
         <GallerySection />
         <NewsSection />
         <ContactSection />

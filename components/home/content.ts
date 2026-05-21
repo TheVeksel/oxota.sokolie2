@@ -29,7 +29,7 @@ export type PriceCategory = {
 export const homeNavigationItems = [
   { href: "/#about", label: "Об угодьях" },
   { href: "/#hunt-types", label: "Виды охоты" },
-  { href: "/#accommodation", label: "Проживание" },
+  { href: "/become-hunter", label: "Стать охотником" },
   { href: "/price-list", label: "Прайс-лист" },
   { href: "/contacts", label: "Контакты" },
 ];
@@ -62,7 +62,7 @@ export const huntTypesShowcase = [
 ];
 
 export const heroStats = [
-  { value: "160 км²", label: "частные охотничьи угодья" },
+  { value: "160 км", label: "частные охотничьи угодья" },
   { value: "24/7", label: "сопровождение гостей" },
   { value: "Premium", label: "уровень проживания" },
 ];
@@ -91,7 +91,7 @@ export const featureCards: FeatureCard[] = [
 ];
 
 export const aboutStats = [
-  ["160 км²", "Частная территория"],
+  ["160 км", "Частная территория"],
   ["24/7", "Поддержка гостей"],
   ["Premium", "Уровень проживания"],
   ["Guided", "Программы с егерем"],
@@ -148,7 +148,7 @@ export const galleryItems = [
   {
     type: "image",
     label: "Дом в лесу",
-    image: "/photo_2026-04-15_05-18-48.jpg",
+    image: "/basic_house.jpg",
   },
   {
     type: "image",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { galleryItems } from "./content";
@@ -14,12 +15,12 @@ export function GallerySection() {
             Визуальный обзор атмосферы угодий.
           </h2>
         </div>
-        <a
-          href="#contact"
+        <Link
+          href="/gallery"
           className="hidden text-sm text-white/65 transition hover:text-white sm:inline-flex"
         >
           Запросить полную галерею <ArrowRight className="ml-2 h-4 w-4" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -35,8 +36,7 @@ export function GallerySection() {
             <div
               className="absolute inset-0 bg-cover bg-center transition duration-500 hover:scale-[1.03]"
               style={{
-                backgroundImage:
-                  `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.10)), url('${item.image}')`,
+                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.10)), url('${item.image}')`,
               }}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
