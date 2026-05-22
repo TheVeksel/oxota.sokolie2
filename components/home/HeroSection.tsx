@@ -7,9 +7,8 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-white/8"
+      className="relative overflow-hidden border-b border-white/6"
     >
-      {/* VIDEO BACKGROUND */}
       <video
         className="absolute inset-0 h-full w-full object-cover scale-105 blur-[7px] brightness-75 contrast-110 saturate-110"
         autoPlay
