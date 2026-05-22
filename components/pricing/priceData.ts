@@ -57,8 +57,6 @@ export const legacyPriceSections: LegacyPriceSection[] = [
         type: "table",
         table: {
           headers: [
-            "Вид охотничьего ресурса",
-            "Стоимость для иных охотников",
           ],
           rows: [
             {
