@@ -3,12 +3,17 @@ import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
+  Bath,
   BedDouble,
   Home,
   Mountain,
   ShowerHead,
   Sparkles,
+  Trees,
+  Tv,
   Utensils,
+  WashingMachine,
+  Wind,
 } from "lucide-react";
 
 const bearLodgeFeatures = [
@@ -34,6 +39,44 @@ const bearLodgeFeatures = [
   },
 ];
 
+const foxHoleFeatures = [
+  {
+    title: "2 спальни",
+    text: "Две отдельные спальни для комфортного размещения гостей.",
+    icon: BedDouble,
+  },
+  {
+    title: "2 санузла",
+    text: "Два санузла — удобно, когда дом заселён полностью.",
+    icon: Bath,
+  },
+  {
+    title: "Кухня",
+    text: "Полноценная кухня для самостоятельного приготовления еды.",
+    icon: Utensils,
+  },
+  {
+    title: "Стиральная машина",
+    text: "Есть возможность постирать вещи прямо на месте.",
+    icon: WashingMachine,
+  },
+  {
+    title: "Сушильная машина",
+    text: "После стирки вещи можно сразу высушить, не подстраиваясь под погоду.",
+    icon: Wind,
+  },
+  {
+    title: "Телевизор",
+    text: "В доме есть телевизор для отдыха после выезда.",
+    icon: Tv,
+  },
+  {
+    title: "Терраса",
+    text: "Отдельная терраса для отдыха на свежем воздухе.",
+    icon: Trees,
+  },
+];
+
 const comfortPlusNotes = [
   "Фотографии откроем вместе с запуском формата",
   "Описание наполнения появится отдельным блоком",
@@ -42,9 +85,20 @@ const comfortPlusNotes = [
 
 const bearLodgeGallery = [
   { src: "/basic_house.jpg", alt: "Медвежья берлога снаружи", large: true },
-  { src: "/photo_2026-04-15_05-19-20.jpg", alt: "Комната в доме" },
-  { src: "/photo_2026-04-15_05-19-24.jpg", alt: "Зона внутри дома" },
-  { src: "/photo_2026-04-15_05-19-28.jpg", alt: "Интерьер дома" },
+  { src: "/berloga-1.jpg", alt: "Медвежья берлога — фото 1" },
+  { src: "/berloga-2.jpg", alt: "Медвежья берлога — фото 2" },
+  { src: "/berloga-3.jpg", alt: "Медвежья берлога — фото 3" },
+  { src: "/berloga-4.jpg", alt: "Медвежья берлога — фото 4" },
+];
+
+const foxHoleGallery = [
+  { src: "/dacha-1.jpg", alt: "Лисья нора — фото 1", large: true },
+  { src: "/dacha-2.jpg", alt: "Лисья нора — фото 2" },
+  { src: "/dacha-3.jpg", alt: "Лисья нора — фото 3" },
+  { src: "/dacha-4.jpg", alt: "Лисья нора — фото 4" },
+  { src: "/dacha-5.jpg", alt: "Лисья нора — фото 5" },
+  { src: "/dacha-6.jpg", alt: "Лисья нора — фото 6" },
+  { src: "/dacha-7.jpg", alt: "Лисья нора — фото 7" },
 ];
 
 const comfortPlusGallery = [
@@ -80,7 +134,8 @@ export function AccommodationPricePage() {
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/68">
                 На этой странице собраны форматы размещения для выездов с
                 проживанием. Ниже можно подробно посмотреть дом Медвежья
-                берлога, а также увидеть анонс следующего формата Комфорт +.
+                берлога, дом Лисья нора, а также увидеть анонс следующего
+                формата Комфорт +.
               </p>
             </div>
 
@@ -91,8 +146,8 @@ export function AccommodationPricePage() {
               </div>
               <p className="mt-5 text-base leading-7 text-white/70">
                 Выберите нужный формат и переходите к подробному описанию.
-                Медвежья берлога уже открыта для просмотра, а Комфорт + пока
-                показан как анонс будущего размещения.
+                Медвежья берлога и Лисья нора уже открыты для просмотра, а
+                Комфорт + пока показан как анонс будущего размещения.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
@@ -122,13 +177,13 @@ export function AccommodationPricePage() {
             Наши форматы проживания
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-white/66">
-            Ниже собраны действующий дом для размещения и следующий формат,
-            который готовится к открытию. Нажмите на карточку, чтобы перейти к
-            подробному блоку.
+            Ниже собраны два действующих дома для размещения и следующий
+            формат, который готовится к открытию. Нажмите на карточку, чтобы
+            перейти к подробному блоку.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 xl:grid-cols-2">
+        <div className="mt-10 grid gap-6 xl:grid-cols-3">
           <Link
             href="#medvezhya-berloga"
             className="group block rounded-[34px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d7c7a0]/24 hover:bg-[linear-gradient(135deg,rgba(215,199,160,0.12),rgba(255,255,255,0.03))]"
@@ -143,6 +198,26 @@ export function AccommodationPricePage() {
             <p className="mt-3 max-w-xl text-base leading-7 text-white/66">
               Две комнаты, кухня, санузел, душевая кабина и размещение прямо на
               территории угодий.
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 text-sm text-[#f3e5c0]">
+              Открыть описание <ArrowRight className="h-4 w-4" />
+            </div>
+          </Link>
+
+          <Link
+            href="#lisya-nora"
+            className="group block rounded-[34px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d7c7a0]/24 hover:bg-[linear-gradient(135deg,rgba(215,199,160,0.12),rgba(255,255,255,0.03))]"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-white/80">
+              <Home className="h-4 w-4 text-[#d7c7a0]" />
+              Лисья нора
+            </div>
+            <h3 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">
+              Дом с расширенным набором удобств
+            </h3>
+            <p className="mt-3 max-w-xl text-base leading-7 text-white/66">
+              2 спальни, 2 санузла, кухня, стиральная и сушильная машины,
+              телевизор и терраса.
             </p>
             <div className="mt-6 inline-flex items-center gap-2 text-sm text-[#f3e5c0]">
               Открыть описание <ArrowRight className="h-4 w-4" />
@@ -251,6 +326,111 @@ export function AccommodationPricePage() {
                   </p>
                   <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-white">
                     5 000 ₽
+                  </p>
+                  <p className="mt-1 text-base text-white/78">за человека</p>
+                </div>
+              </div>
+              <div className="mt-5">
+                <Link
+                  href="/contacts"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#d7c7a0] px-5 py-3 text-sm font-medium text-[#0b0f0b] transition hover:bg-[#ead9b6]"
+                >
+                  Уточнить аренду <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
+        <div className="relative h-12 overflow-hidden">
+          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-[#d7c7a0]/75 to-transparent" />
+          <div className="absolute left-1/2 top-1/2 h-3 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d7c7a0]/28 blur-2xl" />
+          <div className="absolute left-1/2 top-1/2 h-[3px] w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f3e5c0]/90 shadow-[0_0_24px_rgba(243,229,192,0.55)]" />
+        </div>
+      </section>
+
+      <section
+        id="lisya-nora"
+        className="mx-auto max-w-7xl px-6 py-20 lg:px-10"
+      >
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-white/80">
+            <Home className="h-4 w-4 text-[#d7c7a0]" />
+            Лисья нора
+          </div>
+          <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            Дом с расширенным набором удобств для проживания
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/66">
+            Лисья нора подойдёт тем, кто хочет более комфортное размещение на
+            выезде. В доме две спальни, два санузла, кухня, стиральная и
+            сушильная машины, телевизор и отдельная терраса.
+          </p>
+          <div className="mt-6 inline-flex flex-wrap items-center gap-3 rounded-[28px] border border-[#d7c7a0]/28 bg-[linear-gradient(135deg,rgba(215,199,160,0.2),rgba(215,199,160,0.1))] px-5 py-4 text-base font-medium text-[#fff4d8] shadow-[0_18px_50px_rgba(0,0,0,0.22)] ring-1 ring-[#f3e5c0]/12">
+            <span>Заселение возможно от 4 человек</span>
+            <span className="hidden h-1.5 w-1.5 rounded-full bg-[#f3e5c0]/80 sm:block" />
+            <span className="rounded-full border border-[#f3e5c0]/16 bg-[#0b0f0b]/28 px-4 py-2 text-lg font-semibold text-white">
+              10 000 ₽ за человека
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {foxHoleGallery.map((image) => (
+              <div
+                key={image.src}
+                className={`relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0a100a] ${
+                  image.large ? "sm:col-span-2 min-h-[22rem]" : "min-h-[14rem]"
+                }`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050705]/72 via-transparent to-transparent" />
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-4">
+            {foxHoleFeatures.map((feature) => {
+              const Icon = feature.icon;
+
+              return (
+                <article
+                  key={feature.title}
+                  className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-6"
+                >
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/8 text-[#d7c7a0]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 text-xl font-medium text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-7 text-white/64">
+                    {feature.text}
+                  </p>
+                </article>
+              );
+            })}
+
+            <div className="rounded-[30px] border border-[#d7c7a0]/22 bg-[linear-gradient(135deg,rgba(215,199,160,0.18),rgba(215,199,160,0.08))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
+              <p className="text-sm uppercase tracking-[0.24em] text-[#ead9b6]">
+                Условия заселения
+              </p>
+              <div className="mt-3 space-y-3 text-base leading-7 text-white/78">
+                <p>Заселение в Лисью нору возможно только от 4 человек.</p>
+                <div className="rounded-[24px] border border-[#f3e5c0]/14 bg-[#0b0f0b]/24 px-5 py-4">
+                  <p className="text-xs uppercase tracking-[0.28em] text-[#ead9b6]">
+                    Стоимость
+                  </p>
+                  <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-white">
+                    10 000 ₽
                   </p>
                   <p className="mt-1 text-base text-white/78">за человека</p>
                 </div>
