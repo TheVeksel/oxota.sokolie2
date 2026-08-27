@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Footer } from "../components/site/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import YandexMetrika from "@/components/site/YandexMetrika";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Охота в Соколье",
   description:
-    "Охотничьи угодья с проживанием, программами охоты и отдельным прайс-листом.",
+    "Охота в Ленинградской обласи, Всеволожск с проживанием",
   icons: {
     icon: "/logo.jpg",
     apple: "/logo.jpg",
@@ -25,14 +26,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Охота в Соколье",
     description:
-      "Охотничьи угодья с проживанием, программами охоты и отдельным прайс-листом.",
+      "Охота в Ленинградской обласи, Всеволожск с проживанием",
     images: ["/logo.jpg"],
   },
   twitter: {
     card: "summary",
     title: "Охота в Соколье",
     description:
-      "Охотничьи угодья с проживанием, программами охоты и отдельным прайс-листом.",
+      "Охота в Ленинградской обласи, Всеволожск с проживанием",
     images: ["/logo.jpg"],
   },
 };
@@ -49,6 +50,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <YandexMetrika />
         <Footer />
       </body>
     </html>

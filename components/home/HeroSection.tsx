@@ -44,8 +44,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-            Закрытая территория, тёплые дома и продуманный сервис для спокойных
-            выездов на природу.
+            Охота в Ленинградской области, Всеволожск на закрытой территории с проживанием. Уникальные программы охоты и отдыха в живописных лесах
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
