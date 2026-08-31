@@ -325,7 +325,7 @@ export function AccommodationPricePage() {
                     Стоимость
                   </p>
                   <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-white">
-                    5 000 ₽
+                    7 000 ₽
                   </p>
                   <p className="mt-1 text-base text-white/78">за человека</p>
                 </div>

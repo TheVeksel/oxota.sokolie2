@@ -117,7 +117,7 @@ export function ServicesSection() {
         </Link>
 
         <Link
-          href="/accommodation-prices#comfort-plus"
+          href="/accommodation-prices#lisya-nora"
           className="group block"
         >
           <article className="relative min-h-[32rem] overflow-hidden rounded-[38px] border border-white/10 shadow-2xl shadow-black/35 transition duration-300 hover:-translate-y-1 hover:border-[#d7c7a0]/20 hover:shadow-[0_28px_80px_rgba(0,0,0,0.45)]">
@@ -135,7 +135,7 @@ export function ServicesSection() {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#d7c7a0]/18 bg-[#d7c7a0]/10 px-4 py-2 text-sm text-[#f3e5c0] backdrop-blur-sm">
                   <Sparkles className="h-4 w-4" />
-                  Комфорт +
+                  Лисья нора
                 </div>
 
                 <h3 className="mt-6 max-w-xl text-3xl font-semibold tracking-[-0.04em] text-white/94 sm:text-4xl">

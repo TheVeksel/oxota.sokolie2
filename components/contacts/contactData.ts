@@ -2,7 +2,7 @@ export const officeAddress =
   "Ленинградская область, г. Всеволожск, Колтушское шоссе 109";
 
 export const officeEmail = "9711188@mail.ru";
-export const officePhone = "8(81370) 46-411";
+export const officePhone = "+7(921) 946-20-02";
 
 export const officeHours = [
   { days: "Суббота, воскресенье, понедельник", time: "выходные" },
