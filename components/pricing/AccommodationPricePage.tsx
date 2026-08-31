@@ -267,7 +267,7 @@ export function AccommodationPricePage() {
             <span>Заселение возможно от 4 человек</span>
             <span className="hidden h-1.5 w-1.5 rounded-full bg-[#f3e5c0]/80 sm:block" />
             <span className="rounded-full border border-[#f3e5c0]/16 bg-[#0b0f0b]/28 px-4 py-2 text-lg font-semibold text-white">
-              5 000 ₽ за человека
+              7 000 ₽ за человека
             </span>
           </div>
         </div>
