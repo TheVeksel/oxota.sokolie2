@@ -62,7 +62,7 @@ export const huntTypesShowcase = [
 ];
 
 export const heroStats = [
-  { value: "160 км", label: "частные охотничьи угодья" },
+  { value: "16 га", label: "частные охотничьи угодья" },
   { value: "24/7", label: "сопровождение гостей" },
   { value: "Premium", label: "уровень проживания" },
 ];
@@ -91,7 +91,7 @@ export const featureCards: FeatureCard[] = [
 ];
 
 export const aboutStats = [
-  ["160 км", "Частная территория"],
+  ["16 га", "Частная территория"],
   ["24/7", "Поддержка гостей"],
   ["Premium", "Уровень проживания"],
   ["Guided", "Программы с егерем"],

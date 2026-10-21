@@ -5,11 +5,8 @@ export const officeEmail = "9711188@mail.ru";
 export const officePhone = "8(81370) 46-411";
 
 export const officeHours = [
-  { days: "Суббота, воскресенье, понедельник", time: "выходные" },
-  { days: "Вторник", time: "с 14:00 до 16:00" },
-  { days: "Среда", time: "с 11:00 до 16:00", note: "" },
-  { days: "Четверг", time: "с 11:00 до 16:00" },
-  { days: "Пятница", time: "с 14:00 до 17:00" },
+  { days: "Среда, четверг, пятница", time: "с 11:00 до 17:00" },
+  { days: "Суббота, воскресенье, понедельник, вторник", time: "выходные" },
 ];
 
 export const staffContacts = [
