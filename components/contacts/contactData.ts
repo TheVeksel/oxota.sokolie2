@@ -4,7 +4,11 @@ export const officeAddress =
 export const officeEmail = "9711188@mail.ru";
 export const officePhone = "+7(921) 946-20-02";
 
-export const officeHours = [
+export const officeHours: Array<{
+  days: string;
+  time: string;
+  note?: string;
+}> = [
   { days: "Среда, четверг, пятница", time: "с 11:00 до 17:00" },
   { days: "Суббота, воскресенье, понедельник, вторник", time: "выходные" },
 ];
